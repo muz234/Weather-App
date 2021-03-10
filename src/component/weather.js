@@ -12,7 +12,7 @@ function Weather() {
     const APIKEY = "7220e1f7475621ddbd9b30ca23f49feb"; // api key
     async function weatherData(e) {
         e.preventDefault();
-        if (form.city == "") {
+        if (form.city === "") {
             alert("Add values");
         } else {
             // link to fetch the data.
@@ -61,7 +61,7 @@ function Weather() {
             </form>
 
             {/* {console.log(weather)} */}
-            {weather.data != undefined ? (
+            {weather.data !== undefined ? (
                 <div>
                     <DisplayWeather data={weather.data} />
                 </div>
